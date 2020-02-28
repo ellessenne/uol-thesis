@@ -1,0 +1,53 @@
+---
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::pdf_book:
+    latex_engine: pdflatex
+    citation_package: natbib
+    keep_tex: yes
+    includes:
+      in_header: latex/preamble.tex
+      before_body: latex/frontmatter.tex
+geometry: "a4paper, left=3.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm"
+classoption:
+  - oneside
+fontsize: 12pt
+linestretch: 1.5
+toc-depth: 3
+toc: false
+lof: false
+lot: false
+bibliography: [bibliography/articles.bib, bibliography/books.bib, bibliography/others.bib]
+biblio-style: unsrt
+subparagraph: true
+link-citations: true
+---
+
+\mainmatter
+
+```{r packages, include = FALSE}
+# Here we load all the packages we need and setup options for the whole thesis 
+library(knitr)
+```
+
+```{r knitr-options, include = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 5,
+  fig.asp = 0.75,
+  fig.align = "center",
+  out.width = "0.8\\textwidth",
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#",
+  tidy = "styler"
+)
+options(width = 80)
+Sys.setlocale(category = "LC_ALL", locale = "C")
+```
+
+```{r seed}
+# Set random seed for reproducibility
+set.seed(80823849)
+```

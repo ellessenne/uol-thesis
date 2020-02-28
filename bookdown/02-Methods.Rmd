@@ -1,0 +1,9 @@
+# Methods {#methods}
+
+## Section {#methods-section}
+
+You have syntax to link to pretty much anything in this document, see for instance Chapter \@ref(intro) and Section \@ref(methods-references).
+
+## References {#methods-references}
+
+You can cite papers [@gasparini_2018], books [@brent_1973], and even combine multiple citations [@R; @scopus].

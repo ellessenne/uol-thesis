@@ -1,0 +1,6 @@
+# (APPENDIX) Appendix {-}
+
+# Appendix {#a-appendix}
+
+This is an appendix.
+You can have extra code, published papers (if not protected by copyright), or any other supplementary information.

@@ -1,0 +1,26 @@
+# Results {#results}
+
+We have a plot in Figure \@ref(fig:plot) and more results in Table \@ref(tab:table).
+
+```{r plot, fig.cap = "Here goes a caption for this super-cool figure."}
+n <- 100
+x <- rnorm(n = n, mean = 10)
+y <- 0.5 * x + rnorm(n = n)
+plot(x, y)
+```
+
+```{r table}
+tab = data.frame(x, y)
+knitr::kable(
+  head(x),
+  format = "latex",
+  booktabs = TRUE,
+  linesep = "",
+  caption = "Caption of the table.")
+```
+
+We can also include plain R output by setting the chunk option `echo = TRUE`:
+
+```{r r-code, echo = TRUE}
+lm(y ~ x, data = tab)
+```

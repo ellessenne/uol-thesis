@@ -1,0 +1,23 @@
+# Introduction {#intro}
+
+Start by double-clicking `uol-thesis-bookdown.Rproj`.
+If your RStudio is configured correctly (and you have a \LaTeX\xspace distribution on your machine) you should not have any issue.
+
+You should also see a _Build_ tab in the RStudio UI. 
+Click it and then click the _Build Book_ button to compile the document.
+Debugging issues can be weird, check [this book](https://www.goodreads.com/en/book/show/29437996-copying-and-pasting-from-stack-overflow) for help with debugging in general.
+
+Most customisations can be modified in the `latex/preamble.tex` file; however, there is a lot more that could be changed.
+If you need help, open an issue on [this GitHub repository](https://github.com/ellessenne/uol-thesis) and mention `bookdown`.
+
+## Section {#intro-section}
+
+This thesis template follows the guidelines from the University of Leicester for PhD theses.
+
+This document uses `bookdown` (which I recommend over plain \LaTeX, even if you do not use R).
+
+> "Plain \LaTeX is just so unnecessarily complicated, make your life easier and use `bookdown`!"
+>
+> -- Alessandro Gasparini
+
+Check out the [`bookdown` book](https://bookdown.org/yihui/bookdown/) and the [`rmarkdown` book](https://bookdown.org/yihui/rmarkdown/) for more details.
