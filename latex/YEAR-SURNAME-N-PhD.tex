@@ -1,0 +1,29 @@
+\documentclass[12pt, oneside]{book}
+
+% Input the preamble
+\input{preamble.tex}
+
+\begin{document}
+
+% Input titlepage
+\input{titlepage.tex}
+
+% Input frontmatter
+\input{frontmatter.tex}
+
+\mainmatter
+
+% Input chapters, which *should* be kept in separate files - easier to manage!
+\input{01-Introduction.tex}
+\input{02-Methods.tex}
+\input{03-Results.tex}
+\input{04-Discussion.tex}
+
+% Input appendices
+\appendix
+\input{90-Appendix.tex}
+
+% References
+\bibliography{articles,books,others}
+
+\end{document}

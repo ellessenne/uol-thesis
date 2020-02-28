@@ -1,0 +1,131 @@
+%!TEX root = YEAR-SURNAME-N-PhD.tex
+
+%%% Packages and options
+\usepackage{xurl}
+\usepackage{bookmark}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[none]{hyphenat}
+\usepackage{tocbibind}
+\usepackage{setspace}
+\raggedbottom
+\usepackage{ctable}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{xspace}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{upquote}
+
+%%% Size of the document and margins
+%%% This is mandated by the university
+\usepackage[a4paper, left=3.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+%%% Force inclusion of fonts (missing ligatures from embedded pdfs)
+\pdfinclusioncopyfonts=1
+
+%%% The right (TM) alignment for new paragraphs
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+%%% Fonts
+% Microtype setup
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath}
+\microtypesetup{activate = {true, nocompatibility}, final, tracking = true, kerning = true, spacing = true, factor = 1100, stretch = 10, shrink = 10}
+\SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
+              {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+               6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+\SetExtraKerning[unit=space]
+    {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
+    {\textendash={400,400}, % en-dash, add more space around it
+     "28={ ,150}, % left bracket, add space from right
+     "29={150, }, % right bracket, add space from left
+     \textquotedblleft={ ,150}, % left quotation mark, space from right
+     \textquotedblright={150, }} % right quotation mark, space from left
+\SetExtraKerning[unit=space]
+   {encoding={*}, family={qhv}, series={b}, size={large,Large}}
+   {1={-200,-200},
+    \textendash={400,400}}
+\SetTracking{encoding={*}, shape=sc}{40}
+\microtypecontext{spacing=nonfrench}
+
+% Body and maths
+% I used libertinus and libertinus math, uncomment the next lines to use
+% \usepackage[sb, osf]{libertinus}
+% \usepackage{libertinust1math}
+
+% Monospace font for code listings
+% I used Inconsolata, uncomment the next line to use
+% \usepackage[narrow, scaled = 0.95, mono]{inconsolata}
+
+%%% Define new environment for dedication
+\newenvironment{dedication}
+  {\thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \raggedleft
+  }
+  {\par
+   \vspace{\stretch{3}}
+   \cleardoublepage
+  }
+
+%%% Change size of figures' captions
+% \usepackage[font = small, labelfont = sc]{caption}
+
+%%% New command for defining vectors
+\usepackage{bm}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+%%% New command for adding ^st, ^nd, ^rd, ^th
+\newcommand{\first}[0]{\(1\)\textsuperscript{st}}
+\newcommand{\second}[0]{\(2\)\textsuperscript{nd}}
+\newcommand{\third}[0]{\(3\)\textsuperscript{rd}}
+\newcommand{\ith}[1]{\(#1\)\textsuperscript{th}}
+
+%%% Variance command
+\newcommand{\Var}[0]{\text{Var}}
+\newcommand{\var}[0]{\text{var}}
+\newcommand{\Cov}[0]{\text{Cov}}
+\newcommand{\cov}[0]{\text{cov}}
+\newcommand{\Corr}[0]{\text{Corr}}
+\newcommand{\corr}[0]{\text{corr}}
+
+%%% New command for n_obs and n_sim
+\newcommand{\nobs}[0]{n_{\text{obs}}}
+\newcommand{\nsims}[0]{n_{\text{sim}}}
+
+%%% New command for logit function
+\newcommand{\logit}{\text{logit}}
+
+%%% hyperref setup
+% pdf meta-data goes here
+% \hypersetup{pdfauthor = {Name Surname},
+%             pdftitle = {Title}}
+% The next line will colour each link in the document
+% Can be useful while writing, remove in the final version
+\hypersetup{
+  colorlinks = true}
+
+%%% fancyhdr
+\usepackage{fancyhdr}
+\pagestyle{plain}
+
+%%% Sort and compress references
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{unsrt}
+
+%%% Customise Chapter, Section, and Subsection headers
+% Uncomment to customise titles of chapters and sections
+% \usepackage{titlesec}
+% \titleformat{\chapter}[hang]{\LARGE\itshape\filleft}{\thechapter}{1em}{}
+% \titleformat{\section}[hang]{\Large\scshape}{\thesection}{1em}{}
+% \titleformat{\subsection}[hang]{\large\itshape}{\thesubsection}{1em}{}
+% \titleformat{\subsubsection}[hang]{\itshape}{\thesubsubsection}{1em}{}
