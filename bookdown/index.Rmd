@@ -22,12 +22,14 @@ bibliography: [bibliography/articles.bib, bibliography/books.bib, bibliography/o
 biblio-style: unsrt
 subparagraph: true
 link-citations: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 \mainmatter
 
 ```{r packages, include = FALSE}
-# Here we load all the packages we need and setup options for the whole thesis 
+# Here we load all the packages we need and setup options for the whole thesis
 library(knitr)
 ```
 

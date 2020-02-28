@@ -372,16 +372,16 @@ We have a plot in Figure \ref{fig:plot} and more results in Table \ref{tab:table
 
 \caption{\label{tab:table}Caption of the table.}
 \centering
-\begin{tabular}[t]{r}
+\begin{tabular}[t]{rr}
 \toprule
-x\\
+x & y\\
 \midrule
-10.497248\\
-9.301475\\
-9.545996\\
-10.686333\\
-10.426642\\
-10.086181\\
+10.497248 & 4.796485\\
+9.301475 & 3.650826\\
+9.545996 & 5.576487\\
+10.686333 & 4.637482\\
+10.426642 & 8.084386\\
+10.086181 & 3.999149\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -390,7 +390,8 @@ We can also include plain R output by setting the chunk option \texttt{echo\ =\ 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{lm}\NormalTok{(y }\OperatorTok{~}\StringTok{ }\NormalTok{x, }\DataTypeTok{data =}\NormalTok{ tab)}
+\NormalTok{fit <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(y }\OperatorTok{~}\StringTok{ }\NormalTok{x, }\DataTypeTok{data =}\NormalTok{ tab)}
+\KeywordTok{summary}\NormalTok{(fit)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -399,10 +400,33 @@ We can also include plain R output by setting the chunk option \texttt{echo\ =\ 
 # Call:
 # lm(formula = y ~ x, data = tab)
 # 
+# Residuals:
+#      Min       1Q   Median       3Q      Max 
+# -3.00075 -0.59560 -0.03597  0.83827  2.95916 
+# 
 # Coefficients:
-# (Intercept)            x  
-#    -0.07645      0.49888
+#             Estimate Std. Error t value Pr(>|t|)    
+# (Intercept) -0.07645    1.24382  -0.061    0.951    
+# x            0.49888    0.12189   4.093 8.75e-05 ***
+# ---
+# Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+# 
+# Residual standard error: 1.074 on 98 degrees of freedom
+# Multiple R-squared:  0.146,   Adjusted R-squared:  0.1373 
+# F-statistic: 16.75 on 1 and 98 DF,  p-value: 8.754e-05
 \end{verbatim}
+
+And more chunks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(fit, }\DataTypeTok{which =} \DecValTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\textwidth]{YEAR-SURNAME-N-PhD_files/figure-latex/more-code-1} \end{center}
+
+Note that since here we did not set the \texttt{fig.cap} chunk option, the plot did not float.
 
 \hypertarget{discussion}{%
 \chapter{Discussion}\label{discussion}}

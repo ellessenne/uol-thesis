@@ -1,3 +1,8 @@
+---
+editor_options: 
+  chunk_output_type: console
+---
+
 # Results {#results}
 
 We have a plot in Figure \@ref(fig:plot) and more results in Table \@ref(tab:table).
@@ -10,17 +15,27 @@ plot(x, y)
 ```
 
 ```{r table}
-tab = data.frame(x, y)
+tab <- data.frame(x, y)
 knitr::kable(
-  head(x),
+  head(tab),
   format = "latex",
   booktabs = TRUE,
   linesep = "",
-  caption = "Caption of the table.")
+  caption = "Caption of the table."
+)
 ```
 
 We can also include plain R output by setting the chunk option `echo = TRUE`:
 
 ```{r r-code, echo = TRUE}
-lm(y ~ x, data = tab)
+fit <- lm(y ~ x, data = tab)
+summary(fit)
 ```
+
+And more chunks:
+
+```{r more-code, echo = TRUE}
+plot(fit, which = 4)
+```
+
+Note that since here we did not set the `fig.cap` chunk option, the plot did not float.
