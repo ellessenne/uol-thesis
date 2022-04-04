@@ -21,7 +21,7 @@ This thesis template follows the guidelines from the University of Leicester for
 
 This document uses `bookdown` (which I recommend over plain \LaTeX, even if you do not use R).
 
-> "Plain \LaTeX is just so unnecessarily complicated, make your life easier and use `bookdown`!"
+> "Plain \LaTeX{} is just so unnecessarily complicated, make your life easier and use `bookdown`!"
 >
 > -- Alessandro Gasparini
 
