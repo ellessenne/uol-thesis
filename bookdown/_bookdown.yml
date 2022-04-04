@@ -1,9 +1,1 @@
 book_filename: "YEAR-SURNAME-N-PhD.Rmd"
-rmd_files:
-  latex: ["index.Rmd",
-  "01-Introduction.Rmd",
-  "02-Methods.Rmd",
-  "03-Results.Rmd",
-  "04-Discussion.Rmd",
-  "90-Appendix.Rmd",
-  "99-References.Rmd"]
